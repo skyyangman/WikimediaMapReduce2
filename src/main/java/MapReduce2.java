@@ -14,9 +14,10 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
+import static java.lang.Long.*;
+
 public class MapReduce2 {
     public static class Map extends Mapper<LongWritable, Text, Text, Data> {
-        private final static IntWritable one = new IntWritable(1);
         private Text word = new Text();
 
         @Override
@@ -41,8 +42,8 @@ public class MapReduce2 {
         protected void reduce(Text key, Iterable<Data> data, Context context) throws IOException, InterruptedException {
             StringBuilder dateSb = new StringBuilder("\\t[");
             StringBuilder pageViewSb = new StringBuilder("\\t[");
-            Long pageViewSum = 0L;
-            Long popularityTrend = 0L;
+            long pageViewSum = 0L;
+            long popularityTrend = 0L;
 
             //add all the thing for a same key up
             for (Data curData : data) {
@@ -50,16 +51,16 @@ public class MapReduce2 {
                 String date = curData.date;
                 String pageView = curData.pageView;
 
-                dateSb.append(date + ",");
-                pageViewSb.append(pageView + ",");
+                dateSb.append(date).append(",");
+                pageViewSb.append(pageView).append(",");
 
-                pageViewSum += Long.valueOf(pageView);
+                pageViewSum += parseLong(pageView);
 
                 // 345 - 12
                 if (date.endsWith("1") || date.endsWith("2")) {
-                    popularityTrend -= Long.valueOf(pageView);
+                    popularityTrend -= parseLong(pageView);
                 } else {
-                    popularityTrend += Long.valueOf(pageView);
+                    popularityTrend += parseLong(pageView);
                 }
             }
             dateSb.setLength(dateSb.length() - 1); //remove the end comma
@@ -68,10 +69,7 @@ public class MapReduce2 {
             pageViewSb.setLength(pageViewSb.length() - 1); //remove the end comma
             pageViewSb.append("]");
 
-            StringBuilder result = new StringBuilder();
-            result.append(dateSb).append(pageViewSb).append("\\t" + pageViewSum).append("\\t" + popularityTrend);
-
-            context.write(key, new Text(result.toString()));
+            context.write(key, new Text(String.valueOf(dateSb) + pageViewSb + "\\t" + pageViewSum + "\\t" + popularityTrend));
         }
     }
 
