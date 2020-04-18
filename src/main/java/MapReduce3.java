@@ -16,9 +16,9 @@ import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 /**
- * Top 100 item ranked by total page view in descending order, format: Modern_art\t125\n
+ * Top 100 item ranked by pop trend in descending order, format: Modern_art\t25\n
  */
-public class MapReduce2 {
+public class MapReduce3 {
     public static class Map extends Mapper<LongWritable, Text, NullWritable, FooAndTitle> {
         private Text word = new Text();
 
@@ -37,7 +37,7 @@ public class MapReduce2 {
                 String totalView = tokenizer.nextToken();
                 String pop = tokenizer.nextToken();
 
-                heap.offer(new FooAndTitle(totalView, title)); ////////add total view
+                heap.offer(new FooAndTitle(pop, title)); ////////add pop
                 if (heap.size() > 100) {
                     heap.poll();
                 }
@@ -71,8 +71,8 @@ public class MapReduce2 {
 
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
-        Job job = new Job(conf, "job222");
-        job.setJarByClass(MapReduce2.class);
+        Job job = new Job(conf, "job333");
+        job.setJarByClass(MapReduce3.class);
         job.setOutputKeyClass(NullWritable.class);
         job.setOutputValueClass(FooAndTitle.class);
         job.setMapperClass(Map.class);
