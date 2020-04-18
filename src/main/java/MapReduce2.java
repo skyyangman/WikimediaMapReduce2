@@ -28,9 +28,7 @@ public class MapReduce2 {
             StringTokenizer tokenizer = new StringTokenizer(line, " \t\n\r\f");
             //  Modern_art\t[20160601,20160604]\t[50,75]\t125\t25 -> Modern_art\t125\n
             PriorityQueue<FooAndTitle> heap = new PriorityQueue<>(new Comp());
-            int counter = 0;
             while (tokenizer.hasMoreTokens()) {
-                System.out.println(counter++);
                 String title = tokenizer.nextToken();
                 String date = tokenizer.nextToken();
                 String view = tokenizer.nextToken();
@@ -63,7 +61,6 @@ public class MapReduce2 {
             int size = heap.size();
             for (int i = 0; i < size; i++) {
                 FooAndTitle tmp = heap.poll();
-                System.out.println("1");
                 context.write(null, tmp.title + "\t" + tmp.foo);
             }
         }

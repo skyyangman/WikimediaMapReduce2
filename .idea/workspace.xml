@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2121b4b-64c8-4142-bec1-2718dcf655b5" name="Default Changelist" comment="Created MapReduce job 2, 3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/FooAndTitle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MapReduce3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/118.iml" beforeDir="false" afterPath="$PROJECT_DIR$/118.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/pagecounts-20160601-000000" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/.part-r-00000.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/part-r-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MapReduce1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapReduce1.java" afterDir="false" />
+    <list default="true" id="b2121b4b-64c8-4142-bec1-2718dcf655b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/MapReduce2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapReduce2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MapReduce3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MapReduce3.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587053439489</updated>
-      <workItem from="1587053440760" duration="31001000" />
+      <workItem from="1587053440760" duration="31159000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor code and create MapReduce job 1">
       <created>1587054356723</created>
@@ -121,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587054356723</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created MapReduce job 2, 3">
+      <created>1587180169243</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587180169243</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,17 +154,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/MapReduce2.java</url>
-          <line>56</line>
+          <line>54</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/MapReduce3.java</url>
-          <line>34</line>
+          <line>32</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/MapReduce2.java</url>
-          <line>33</line>
+          <line>31</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
